@@ -6,30 +6,48 @@ $(document).ready(function() {
 // Base URL
 //  let queryURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + citySearch + "&appid=44a6ad4a174b6c522a94ebe5df83deda&units=imperial";
 //  console.log(queryURL);
+// let todayURL = "https://api.openweathermap.org/data/2.5/weather?q=" + search + "&appid=44a6ad4a174b6c522a94ebe5df83deda&units=imperial";
+// let forecastURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + search + "&appid=44a6ad4a174b6c522a94ebe5df83deda&units=imperial";
+let history = [];
 
-// VARIABLE FOR FORECAST
-let dayForecast = 0;
 // FUNCTIONS
 //=======================================================
 
 
-$("#search-button").click(function() {
-    var citySearch = $('#search-city').val();
+$("#search-button").on("click", function() {
+    var search = $("#search-city").val();
 
-    let queryURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + citySearch + "&appid=44a6ad4a174b6c522a94ebe5df83deda&units=imperial";
+    getWeather(search);
+});
 
+$(".history").on("click", "li", function() {
+    getWeather($(this).text());
+});
+
+function row(history) {
+    var li = $("<li>").addClass("list-group-item list-group-action").text(history);
+    $(".history").append(li);
+}
+
+function getWeather(search) {
     $.ajax({
-        url: queryURL,
-        method: "GET"
-    }).done(function(WeatherData){
-        console.log(WeatherData);
+        type: "GET",
+        url: "https://api.openweathermap.org/data/2.5/weather?q=" + search + "&appid=44a6ad4a174b6c522a94ebe5df83deda&units=imperial",
+        dataType: "json",
+        success: function(data) {
+
+            console.log("https://api.openweathermap.org/data/2.5/weather?q=" + search + "&appid=44a6ad4a174b6c522a94ebe5df83deda&units=imperial");
+            console.log(data);
+
+            if (history.indexOf(search) === -1) {
+                history.push(search);
+                window.localStorage.setItem("history", JSON.stringify(history));
+
+                row(history);
+            }
+        }
     })
-
-})
-
-// MAIN PROCESS
-//=======================================================
-
+}
 
 
 // 1. Retrive user input, convert into variables
