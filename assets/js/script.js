@@ -60,12 +60,15 @@ $(document).ready(function () {
               console.log(WeatherData);
               $("#forecast").html("");
               $("#forecast").append("<h2>5-Day Forecast:<h2>");
-              for (let i = 0; i < WeatherData.length; i++) {
-                  if (WeatherData[0].list[i].dt_text.indexOf("15:00:00") !== -1) {
-                      let forecastDiv = $("<div>").addClass("card");
-                      let cardTitle = $("<h3>").addClass("card-title");
-
-                      $("forecast").append(forecastDiv, cardTitle);
+              for (let i = 0; i < WeatherData.list.length; i++) {
+                  if (WeatherData.list[i].dt_txt.indexOf("15:00:00") !== -1) {
+                      let cardDiv = $("<div>").addClass("card");
+                      let cardTitle = $("<h4>").addClass("card-title").text(new Date(WeatherData.list[i].dt_txt).toLocaleDateString());
+                      let temp = $("<p>").text("Temp: " + WeatherData.list[i].main.temp_max + "°F");
+                      let humidity = $("<p>").text("Humidity: " + WeatherData.list[i].main.humidity + "%"); 
+// Append card title to the card
+                    cardDiv.append(cardTitle, temp, humidity);
+                      $("#forecast").append(cardDiv);
                   }
               }
           }
@@ -98,8 +101,8 @@ $(document).ready(function () {
           li = $("<li>").addClass("list-group-item").text(city[i]);
           $(".history").append(li);
       }
-      console.log("city " + city);
-      console.log("city 0 " + city[0]);
+      // console.log("city " + city);
+      // console.log("city 0 " + city[0]);
       // li = $("<li>").addClass("list-group-item").text(city);
       // $(".history").append(li);
 
