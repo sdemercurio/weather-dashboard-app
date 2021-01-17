@@ -102,7 +102,7 @@ $(document).ready(function () {
       getWeather(search);
     //   getForecast(search);
   });
-  // Display searched cities to toggle back and forth
+  // Display searched cities to toggle back and forth between forecasts
   //=======================================================
   $(".history").on("click", "li", function () {
       getWeather($(this).text());
