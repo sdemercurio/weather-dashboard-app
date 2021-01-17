@@ -42,7 +42,8 @@ WHEN I open the weather dashboard
 THEN I am presented with the last searched city forecast
 
 ## Demo
-![gif](https://drive.google.com/file/d/1_6IH3wpEuLq3GJoF2gmJxHnbY_5aEffV/)
+![weather_dash](https://user-images.githubusercontent.com/73494343/104851355-8567bc80-58c2-11eb-8905-a7fcb92c6f4c.gif)
+
 
 ## Technologies
 * Bootstrap 4
