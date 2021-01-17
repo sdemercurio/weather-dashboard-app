@@ -47,7 +47,7 @@ WHEN I open the weather dashboard
 THEN I am presented with the last searched city forecast
 
 ## Demo
-![weather_dash](./assets/images/weather_dash.gif)
+![weather_dash](assets/images/weather_dash.gif)
 
 
 ## Technologies
