@@ -57,35 +57,6 @@ $(document).ready(function () {
 
           }
       })
-
-
-      let uvURL = 'http://api.openweathermap.org/data/2.5/uvi?lat=' + WeatherData.coord.lat + '&lon=' + WeatherData.coord.lon + '&appid=44a6ad4a174b6c522a94ebe5df83deda';
-            $.ajax({
-                url: uvURL,
-                method: 'GET'
-            })
-                .then(function (WeatherData) {
-                    
-                    let uvIndex = WeatherData.value;
-                    $('#uv-color').text(uvIndex);
-                    //Determine which color to display the UV Index
-                    if (uvIndex >= 3 && uvIndex < 6) {
-                        $('.uv-color').attr("class", "badge badge-yellow");
-                    }
-                    else if (uvIndex >= 6 && uvIndex < 8) {
-                        $('.uv-color').attr("class", "badge badge-orange");
-                    }
-                    else if (uvIndex >= 8) {
-                        $('.uv-color').attr("class", "badge badge-red");
-                    }
-                    else {
-                        $('.uv-color').attr("class", "badge badge-green");
-                    }
-
-                    //displays weather card
-                    $('#today').append(uvIndex);
-
-                });
   };
   // Search Button
   //=======================================================
