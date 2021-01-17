@@ -54,6 +54,7 @@ $(document).ready(function () {
               // console.log("wind speed: " + WeatherData.wind.speed);
               $("#today").append(cityDate, temp, humidity, windSpeed);
               $("#today").append("<hr>");
+              getForecast(search);
 
           }
       })
@@ -99,7 +100,7 @@ $(document).ready(function () {
       $("#search-city").empty();
 
       getWeather(search);
-      getForecast(search);
+    //   getForecast(search);
   });
   // Display searched cities to toggle back and forth
   //=======================================================
