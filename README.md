@@ -1,4 +1,4 @@
-# weather-app
+### Any Weather
 
 Weather Dash is an application utilizing Open Weather API to retrive weather data and dynamically update HTML.
 
