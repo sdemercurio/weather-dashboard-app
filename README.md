@@ -7,6 +7,7 @@ Any Weather is an application utilizing Open Weather API to retrive weather data
 - [General info](#general-info)
 - [User Story](#user-story)
 - [Acceptance Criteria](#acceptance-criteria)
+- [Screenshots](#sscreenshots)
 - [Demo](#demo)
 - [Technologies](#technologies)
 - [Status](#status)
