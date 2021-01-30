@@ -13,12 +13,11 @@ Any Weather is an application utilizing Open Weather API to retrive weather data
 - [Status](#status)
 
 ## General info.
+```
 
 Upon accessing the applcation, the user is able to search a city and recieve the current weather as well as the 5-Day forecast. Each serached city appears beneath the search window, allowing the user to toggle between cities to compare weather.
 
-```
 The current weeather displays the temperature, humidity, and wind speed, and is accompanied by a weather icon reflecting the current conditions.
-```
 
 The 5-day forecast features the date, temperature, humidity, and weather icon.
 
