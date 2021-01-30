@@ -1,6 +1,6 @@
 ### Any Weather
 
-Weather Dash is an application utilizing Open Weather API to retrive weather data and dynamically update HTML.
+Any Weather is an application utilizing Open Weather API to retrive weather data and dynamically update HTML.
 
 ## Table of contents
 
@@ -45,6 +45,12 @@ WHEN I click on a city in the search history
 THEN I am again presented with current and future conditions for that city
 WHEN I open the weather dashboard
 THEN I am presented with the last searched city forecast
+```
+## Screenshots
+![enter-app](assets/images/any-weather-1.PNG)
+![city-one](assets/images/any-weather-2.PNG)
+![city-two](assets/images/any-weather-3.PNG)
+
 
 ## Demo
 ![weather_dash](assets/images/weather_dash.gif)
@@ -59,5 +65,5 @@ THEN I am presented with the last searched city forecast
 Project is: _in progress_
 I realize I do not have the UV index included. This is something I will remedy in the next week.
 
-Link to deployed page: https://sdemercurio.github.io/weather-app/
+Link to deployed page: https://sdemercurio.github.io/any-weather/
 ```
