@@ -11,6 +11,7 @@ Any Weather is an application utilizing Open Weather API to retrive weather data
 - [Demo](#demo)
 - [Technologies](#technologies)
 - [Status](#status)
+- [Contact](#contact)
 
 ## General info.
 
@@ -62,6 +63,9 @@ THEN I am presented with the last searched city forecast
 
 ## Status
 Project is: _in progress_
+
+## Contact
+Email: sarah.l.demercurio@gmail.com
 
 Link to deployed page: https://sdemercurio.github.io/any-weather/
 ```
