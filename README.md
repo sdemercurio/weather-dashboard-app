@@ -64,7 +64,6 @@ THEN I am presented with the last searched city forecast
 
 ## Status
 Project is: _in progress_
-I realize I do not have the UV index included. This is something I will remedy in the next week.
 
 Link to deployed page: https://sdemercurio.github.io/any-weather/
 ```
