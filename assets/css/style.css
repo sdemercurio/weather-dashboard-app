@@ -5,12 +5,12 @@
 	border: 0;
     }
 
-    header {
+    /* header {
         background-color: lightblue;
-    }
+    } */
 
     h1 {
-        font-family: neuzeit-grotesk, sans-serif;
+        font-family: 'Quicksand', sans-serif;
         font-weight: 700;
         font-style: normal;
         color: rgb(46, 45, 45);
@@ -29,7 +29,7 @@
     }
 
     h5 {
-        font-family: neuzeit-grotesk, sans-serif;
+        font-family: 'Quicksand', sans-serif;
         font-weight: 400;
         font-style: normal;
     }
@@ -40,7 +40,7 @@
         font-style: normal;
         font-size: 18px;
         letter-spacing: 2px;
-        line-height: 15px;
+        line-height: 25px;
     }
 
     aside {
@@ -53,17 +53,23 @@
     }
 
     #forecast {
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         margin-top: 45px;
-        margin-left: 20px;
+        
     }
 
     .card {
         display: inline-block;
-        width: 180px;
+        width: 280px;
         padding: 15px;
-        background-color: cornflowerblue;
+        background-image: linear-gradient(180deg, rgb(0, 64, 255), rgb(125, 168, 248));
+        border-radius: 10%;
         color: white;
-        margin-right: 10px;
+        margin-top: 10px;
+        align-items: center;
     }
 
     #weather-icon {
@@ -72,4 +78,35 @@
 
     #weather-icon-forecast {
         margin-left: 50px;
+    }
+
+    @media only screen and (min-width: 1000px) {
+
+        body {
+            margin: 0 5% 0 5%;
+        }
+
+        h2 {
+            font-family: korolev, sans-serif;
+            font-weight: 500;
+            font-style: normal;
+            margin-right: 20px;
+        }
+
+        #forecast {
+            display:flex;
+            flex-direction: row;
+            margin-top: 45px;
+            
+        }
+        
+        .card {
+            display: inline-block;
+            width: 180px;
+            padding: 15px;
+            background-image: linear-gradient(180deg, rgb(0, 64, 255), rgb(125, 168, 248));
+            border-radius: 15%;
+            color: white;
+            margin-right: 10px;
+        }
     }
